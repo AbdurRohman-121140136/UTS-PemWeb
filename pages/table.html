@@ -85,6 +85,89 @@
     </footer>
 
     <script src="../script/table.js"></script>
-    
+    <script>
+        const dataDummy = [
+            {
+                name: "John Doe",
+                nim: "123456",
+                programStudi: "Teknik Informatika",
+                email: "john@example.com",
+                password: "password123",
+                jenisKelamin: "Laki-laki",
+                tanggalLahir: "2000-01-01",
+                agama: "Islam",
+                sekolahAsal: "SMA Example 1",
+                alamat: "Jalan Contoh No. 123"
+            },
+            {
+                name: "Jane Smith",
+                nim: "789012",
+                programStudi: "Teknik Elektro",
+                email: "jane@example.com",
+                password: "password456",
+                jenisKelamin: "Perempuan",
+                tanggalLahir: "1999-05-15",
+                agama: "Kristen",
+                sekolahAsal: "SMA Example 2",
+                alamat: "Jalan Contoh No. 456"
+            },
+            {
+                name: "Bob Johnson",
+                nim: "345678",
+                programStudi: "Teknik Kimia",
+                email: "bob@example.com",
+                password: "password789",
+                jenisKelamin: "Laki-laki",
+                tanggalLahir: "1998-10-20",
+                agama: "Hindu",
+                sekolahAsal: "SMA Example 3",
+                alamat: "Jalan Contoh No. 789"
+            },
+            {
+                name: "Alice Davis",
+                nim: "901234",
+                programStudi: "Teknik Sipil",
+                email: "alice@example.com",
+                password: "password101",
+                jenisKelamin: "Perempuan",
+                tanggalLahir: "1997-03-25",
+                agama: "Buddha",
+                sekolahAsal: "SMA Example 4",
+                alamat: "Jalan Contoh No. 101"
+            },
+            {
+                name: "Charlie Brown",
+                nim: "567890",
+                programStudi: "Teknik Mesin",
+                email: "charlie@example.com",
+                password: "password112",
+                jenisKelamin: "Laki-laki",
+                tanggalLahir: "1996-07-30",
+                agama: "Katolik",
+                sekolahAsal: "SMA Example 5",
+                alamat: "Jalan Contoh No. 112"
+            }
+        ];
+
+        function populateTable() {
+            const tableData = document.getElementById("tableData");
+
+            dataDummy.forEach(function (mahasiswa) {
+                const row = tableData.insertRow(tableData.rows.length);
+                row.insertCell(0).textContent = mahasiswa.name;
+                row.insertCell(1).textContent = mahasiswa.nim;
+                row.insertCell(2).textContent = mahasiswa.programStudi;
+                row.insertCell(3).textContent = mahasiswa.email;
+                row.insertCell(4).textContent = mahasiswa.password;
+                row.insertCell(5).textContent = mahasiswa.jenisKelamin;
+                row.insertCell(6).textContent = mahasiswa.tanggalLahir;
+                row.insertCell(7).textContent = mahasiswa.agama;
+                row.insertCell(8).textContent = mahasiswa.sekolahAsal;
+                row.insertCell(9).textContent = mahasiswa.alamat;
+            });
+        }
+
+        populateTable();
+    </script>
 </body>
 </html>
